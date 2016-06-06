@@ -1,3 +1,7 @@
+<!-- Create a form that allows a user to input items they need at the store.
+When the user submits the form, hide the form and display the list of items in alphabetical order, all uppercased.
+Hint: To do this, build an array of the inputted items. (Make sure you don't include any blank fields.) Sort the array in alphabetical order. Make a new array with each entry uppercased (don't just uppercase them when you display them). Then, display the sorted list of things as list items inside a <ul>. -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,9 +10,29 @@
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Grocery List</title>
   </head>
   <body>
-
+    <div class="container">
+      <h1>Grocery List</h1>
+      <form id="gList">
+        <div class="form-group">
+          <label for="item1">1st item:</label>
+          <input id="item1" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="item2">2nd item:</label>
+          <input id="item2" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn btn-warning">Make a List!</button>
+      </form>
+    </div>
+    <div id="reveal">
+      <h1>Our Array</h1>
+        <ul>
+          <li><span class="item1"></span></li>
+          <li><span class="item2"></span></li>
+        </ul>
+    </div>
   </body>
 </html>
